@@ -41,18 +41,21 @@ def index_init():
                 #cell.value = '=HYPERLINK("5.1.1\\' + cell_start_value + "_" + row[3].value +'"'+',"' + cell.value + '")'
                 #cell.value = "=HYPERLINK('5.1.1/" + cell.value + "_" + row[3].value + "','" + cell.value + "')"
                 cell.hyperlink = Hyperlink('link',
-                        target='5.1.1\\' + cell_start_value,
+                        target='.\\5.1.1\\' + cell_start_value + "_" + row[3].value,
                         #location='5.1.1/' + cell.value + "_" + row[3].value,
                         display='something')
                 print(cell.value)
                 link1 = row[3]
                 link1.hyperlink = Hyperlink('link',
-                        target='5.1.1\\' + cell_start_value,
+                        target='.\\5.1.1\\' + cell_start_value + "_" + row[3].value,
                         #location='5.1.1/' + cell.value + "_" + row[3].value,
                         display='something')
                 
                 index_rows.append((cell_start_value,cell.value))
-                new_ws.append((sec1,sec2,sec3,row[1].value,cell_start_value,row[3].value))  
+                try:
+                        new_ws.append((sec1,sec2,sec3,row[1].value,cell_start_value,row[3].value, row[4].value))  
+                except:
+                        new_ws.append((sec1,sec2,sec3,row[1].value,cell_start_value,row[3].value))  
 
     file.save('test2.xlsx')
     new_file.save('testof1.xlsx')
@@ -61,4 +64,11 @@ def index_init():
     
     return send_file(f, as_attachment=True, attachment_filename='indexmain.html')
     '''
- 
+ #index_init()
+
+def dict_doc():
+        wb = load_workbook('testof1.xlsx')
+        ws = wb.active
+
+        for row in ws.iter_rows:
+                
