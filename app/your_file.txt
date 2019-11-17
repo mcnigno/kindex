@@ -1,0 +1,13 @@
+.
+['indextree', 'templates', 'translations']./indextree
+['5.1.1']./indextree/5.1.1
+['079254C-0000-JSD-1900-03_B', '079254C-0000-JSD-6000-01_B', '079254C-0000-JSD-6000-02_B', '079254C-0000-JSD-6000-03_B', '079254C-0000-JSD-6200-001_B']./indextree/5.1.1/079254C-0000-JSD-1900-03_B
+[]./indextree/5.1.1/079254C-0000-JSD-6000-01_B
+[]./indextree/5.1.1/079254C-0000-JSD-6000-02_B
+[]./indextree/5.1.1/079254C-0000-JSD-6000-03_B
+[]./indextree/5.1.1/079254C-0000-JSD-6200-001_B
+[]./templates
+[]./translations
+['pt']./translations/pt
+['LC_MESSAGES']./translations/pt/LC_MESSAGES
+[]
